@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -10,10 +11,14 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
   declarations: [
     LogInComponent,
     SignUpComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    FooterComponent
   ]
 })
 export class SharedModule { }

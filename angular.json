@@ -37,7 +37,8 @@
               "popper.js/dist/popper.min.js",
               "bootstrap/dist/js/bootstrap.min.js",
               "@angular/material/prebuilt-themes/indigo-pink.css",
-              "@angular/material/icon/_icon-theme.scss"
+              "@angular/material/icon/_icon-theme.scss",
+              "font-awesome/css/font-awesome.min.css"
             ],
             "scripts": []
           },

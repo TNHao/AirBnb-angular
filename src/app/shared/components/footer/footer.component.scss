@@ -1,0 +1,17 @@
+footer{
+    .pdx-80{
+        padding: 0 80px;
+    }
+
+    .pdy-48{
+        padding: 48px 0;
+    }
+
+    .column{
+        flex-wrap: wrap;
+
+        p{
+            flex-basis: 33.3333%;
+        }
+    }
+}

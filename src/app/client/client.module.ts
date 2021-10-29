@@ -6,6 +6,7 @@ import { RoomListComponent } from './pages/room-list/room-list.component';
 import { RoomDetailComponent } from './pages/room-detail/room-detail.component';
 import { UserInfoComponent } from './pages/user-info/user-info.component';
 import { ClientRoutingModule } from './client-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -19,7 +20,8 @@ import { ClientRoutingModule } from './client-routing.module';
   ],
   imports: [
     CommonModule,
-    ClientRoutingModule
+    ClientRoutingModule, 
+    SharedModule
   ]
 })
 export class ClientModule { }

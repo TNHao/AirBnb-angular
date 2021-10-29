@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     NoopAnimationsModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule, 
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
