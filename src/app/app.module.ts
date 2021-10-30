@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    // FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

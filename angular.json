@@ -37,7 +37,8 @@
               "src/styles.scss", 
               "bootstrap/dist/css/bootstrap.min.css",
               "@angular/material/prebuilt-themes/indigo-pink.css",
-              "@angular/material/icon/_icon-theme.scss"
+              "@angular/material/icon/_icon-theme.scss",
+              "font-awesome/css/font-awesome.min.css"
             ],
             "scripts": [
               "jquery/dist/jquery.min.js",
