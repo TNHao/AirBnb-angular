@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "8e527fe0-bab6-4cbd-9204-198b588de6c5"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -33,13 +36,14 @@
             "styles": [
               "src/styles.scss", 
               "bootstrap/dist/css/bootstrap.min.css",
-              "jquery/dist/jquery.min.js",
-              "popper.js/dist/popper.min.js",
-              "bootstrap/dist/js/bootstrap.min.js",
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "@angular/material/icon/_icon-theme.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "jquery/dist/jquery.min.js",
+              "popper.js/dist/popper.min.js",
+              "bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {

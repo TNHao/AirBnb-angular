@@ -4,19 +4,19 @@ import { AdminComponent } from './admin.component';
 import { LocationManagementComponent } from './pages/location-management/location-management.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
 
-const routes: Routes = [
+const adminRoutes: Routes = [
   {
-    path: "",
+    path: '',
     component: AdminComponent,
     children: [
-      { path: "", component: UserManagementComponent },
-      { path: "location-management", component: LocationManagementComponent }
-    ]
-  }
+      { path: '', component: UserManagementComponent },
+      { path: 'location-management', component: LocationManagementComponent },
+    ],
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild(adminRoutes)],
+  exports: [RouterModule],
 })
-export class AdminRoutingModule { }
+export class AdminRoutingModule {}

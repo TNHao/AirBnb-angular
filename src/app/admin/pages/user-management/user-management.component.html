@@ -1,1 +1,44 @@
-<p>user-management works!</p>
+<div class="container-fluid user">
+  <div class="row mb-3 mt-3 ml-1">
+    <h3 class="text-left text-primary font-weight-bold">Tìm kiếm người dùng</h3>
+    <div class="col">
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Tên người dùng"
+          id="searchName"
+        />
+        <div class="input-group-prepend">
+          <button
+            class="input-group-text"
+            id="btnTimKH"
+            onClick="{handleOnSearch}"
+          >
+            <mat-icon>search</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered table-hover myTable">
+      <thead class="text-primary">
+        <tr>
+          <th>Tài khoản</th>
+          <th>Họ tên</th>
+          <th>Email</th>
+          <th>Số điện thoại</th>
+          <th>Mật khẩu</th>
+          <th>Loại người dùng</th>
+          <th>
+            <mat-icon>build</mat-icon>
+          </th>
+        </tr>
+      </thead>
+      <tbody id="tableDanhSach">
+          
+      </tbody>
+    </table>
+  </div>
+</div>

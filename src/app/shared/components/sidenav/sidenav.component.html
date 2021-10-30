@@ -1,0 +1,23 @@
+<mat-nav-list>
+  <div class="logo py-4">
+    <img src="https://www.goldyarora.com/wp-content/uploads/2017/10/G-Suite-Admin-Logo.png">
+  </div>
+  <mat-divider></mat-divider>
+  <h2 matSubheader class="mt-2">APPLICATIONS</h2>
+
+  <a
+    mat-list-item
+    routerLinkActive="list-item-active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLink="/admin"
+  >
+    <mat-icon>account_circle</mat-icon> User
+  </a>
+  <a
+    mat-list-item
+    routerLinkActive="list-item-active"
+    routerLink="/admin/location-management"
+  >
+    <mat-icon>explore</mat-icon> Location
+  </a>
+</mat-nav-list>

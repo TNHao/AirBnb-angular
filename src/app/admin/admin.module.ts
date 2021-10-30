@@ -4,7 +4,9 @@ import { AdminComponent } from './admin.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
 import { LocationManagementComponent } from './pages/location-management/location-management.component';
 import { AdminRoutingModule } from './admin-routing.module';
-
+import { SharedModule } from '../shared/shared.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -15,7 +17,10 @@ import { AdminRoutingModule } from './admin-routing.module';
   ],
   imports: [
     CommonModule, 
-    AdminRoutingModule
+    AdminRoutingModule,
+    MatSidenavModule,
+    MatIconModule,
+    SharedModule
   ]
 })
 export class AdminModule { }
