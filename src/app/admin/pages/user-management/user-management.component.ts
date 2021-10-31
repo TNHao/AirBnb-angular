@@ -13,8 +13,7 @@ export class UserManagementComponent implements OnInit {
   ngOnInit(): void {
     this.data.get('users/pagination').subscribe(
       (result: any) => {
-        this.listUser = result.content;
-        console.log(this.listUser);
+        this.listUser = result;
       },
       (err: any) => {
         console.log(err);

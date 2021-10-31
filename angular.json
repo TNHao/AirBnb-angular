@@ -41,8 +41,7 @@
               "font-awesome/css/font-awesome.min.css"
             ],
             "scripts": [
-              "jquery/dist/jquery.min.js",
-              "popper.js/dist/popper.min.js",
+              "jquery/dist/jquery.slim.min.js",
               "bootstrap/dist/js/bootstrap.min.js"
             ]
           },

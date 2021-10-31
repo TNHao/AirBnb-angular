@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { AdminRoutingModule } from '../admin/admin-routing.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { ClientRoutingModule } from '../client/client-routing.module';
+import { HeaderComponent } from './components/header/header.component';
 
 
 
@@ -19,7 +20,7 @@ import { ClientRoutingModule } from '../client/client-routing.module';
     SignUpComponent,
     PageNotFoundComponent,
     SidenavComponent, 
-    FooterComponent
+    FooterComponent, HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +32,8 @@ import { ClientRoutingModule } from '../client/client-routing.module';
   ],
   exports: [
     SidenavComponent,
-    FooterComponent
+    FooterComponent, 
+    HeaderComponent
   ],
 })
 export class SharedModule { }
