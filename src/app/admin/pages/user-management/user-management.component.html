@@ -13,7 +13,6 @@
           <button
             class="input-group-text"
             id="btnTimKH"
-            onClick="{handleOnSearch}"
           >
             <mat-icon>search</mat-icon>
           </button>
@@ -25,20 +24,186 @@
     <table class="table table-bordered table-hover myTable">
       <thead class="text-primary">
         <tr>
-          <th>Tài khoản</th>
           <th>Họ tên</th>
           <th>Email</th>
           <th>Số điện thoại</th>
-          <th>Mật khẩu</th>
+          <th>Địa chỉ</th>
           <th>Loại người dùng</th>
           <th>
             <mat-icon>build</mat-icon>
           </th>
         </tr>
       </thead>
-      <tbody id="tableDanhSach">
-          
-      </tbody>
+      <ng-container *ngIf="listUser">
+        <tbody id="tableDanhSach" *ngFor="let user of listUser">
+          <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.address }}</td>
+            <td>{{ user.type }}</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-success mr-1"
+                data-toggle="modal"
+                data-target="#exampleModal"
+                
+              >
+                Xem
+              </button>
+              <button class="btn btn-danger">Xóa</button>
+            </td>
+          </tr>
+        </tbody>
+      </ng-container>
     </table>
+  </div>
+  <div
+    className="modal fade"
+    id="exampleModal"
+    tabIndex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div className="modal-dialog">
+      <div className="modal-content">
+        <div className="modal-header">
+          <h5 className="modal-title" id="exampleModalLabel">
+            Thêm người dùng
+          </h5>
+          <button
+            type="button"
+            className="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div className="modal-body">
+          <form role="form">
+            <div className="form-group">
+              <div className="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <mat-icon>account_circle</mat-icon>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  name="taiKhoan"
+                  className="form-control"
+                  placeholder="Tài khoản"
+                  id="taiKhoan"
+                />
+              </div>
+              <span class="sp-thongbao" id="tbTaiKhoan"></span>
+            </div>
+            <div className="form-group mt-3">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <mat-icon> vpn_key</mat-icon>
+                  </span>
+                </div>
+                <input
+                  type="password"
+                  name="matkhau"
+                  placeholder="Mật khẩu"
+                  className="form-control"
+                  id="matKhau"
+                />
+              </div>
+              <span class="sp-thongbao" id="tbMatKhau"></span>
+            </div>
+            <div className="form-group mt-3">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <mat-icon> mail_outline</mat-icon>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Email"
+                  className="form-control"
+                  id="email"
+                />
+              </div>
+              <span class="sp-thongbao" id="tbEmail"></span>
+            </div>
+            <div className="form-group mt-3">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <mat-icon> call</mat-icon>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  name="soDt"
+                  placeholder="Số điện thoại"
+                  className="form-control"
+                  id="soDt"
+                />
+              </div>
+              <span class="sp-thongbao" id="tbSoDt"></span>
+            </div>
+            <div className="form-group mt-3">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <i class="fa fa-bars"></i>
+                  </span>
+                </div>
+                <select
+                  className="form-control"
+                  name="maLoaiNguoiDung"
+                  id="maLoaiNguoiDung"
+                >
+                  <option>QuanTri</option>
+                  <option>KhachHang</option>
+                </select>
+              </div>
+              <span class="sp-thongbao" id="tbMaLoaiNguoiDung"></span>
+            </div>
+            <div className="form-group mt-3">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <mat-icon>face</mat-icon>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  name="hoTen"
+                  placeholder="Họ tên"
+                  className="form-control"
+                  id="hoTen"
+                />
+              </div>
+              <span class="sp-thongbao" id="tbHoTen"></span>
+            </div>
+          </form>
+        </div>
+        <div className="modal-footer">
+          <button type="button" id="them" className="btn btn-success">
+            Thêm
+          </button>
+          <button type="button" id="capNhap" className="btn btn-success">
+            Cập nhập
+          </button>
+          <button
+            type="button"
+            className="btn btn-danger"
+            data-bs-dismiss="modal"
+          >
+            Đóng
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -10,10 +10,15 @@ export class UserManagementComponent implements OnInit {
   listUser: any;
   constructor(private data: DataService) {}
 
+  viewClick(user: any){
+
+  }
+
   ngOnInit(): void {
     this.data.get('users/pagination').subscribe(
       (result: any) => {
         this.listUser = result;
+        console.log(this.listUser);
       },
       (err: any) => {
         console.log(err);
