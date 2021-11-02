@@ -11,8 +11,11 @@ import { AdminRoutingModule } from '../admin/admin-routing.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { ClientRoutingModule } from '../client/client-routing.module';
 import { HeaderComponent } from './components/header/header.component';
-
-
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input"
+import { MatButtonModule } from "@angular/material/button"
+import { MatCardModule } from "@angular/material/card";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { HeaderComponent } from './components/header/header.component';
     SignUpComponent,
     PageNotFoundComponent,
     SidenavComponent, 
-    FooterComponent, HeaderComponent
+    FooterComponent, 
+    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +32,13 @@ import { HeaderComponent } from './components/header/header.component';
     MatDividerModule,
     MatListModule,
     AdminRoutingModule,
-    ClientRoutingModule
+    ClientRoutingModule, 
+    MatFormFieldModule,
+    MatInputModule, 
+    MatButtonModule, 
+    MatCardModule,
+    ReactiveFormsModule, 
+    FormsModule
   ],
   exports: [
     SidenavComponent,

@@ -18,8 +18,7 @@ import { HttpConfigInterceptor } from './core/interceptors/http-config.intercept
     AppRoutingModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,
-    HttpClientModule,
-    // FontAwesomeModule
+    HttpClientModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true }
