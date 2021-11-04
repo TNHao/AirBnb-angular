@@ -27,17 +27,19 @@
                     <img src="../../../../assets/img/user_pic.png" class="user-pic" alt="">
                 </div>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item font-weight-bold" href="#">Messages</a>
-                    <a class="dropdown-item font-weight-bold" href="#">Notifications</a>
-                    <a class="dropdown-item font-weight-bold" href="#">Trips</a>
-                    <a class="dropdown-item font-weight-bold" href="#">Wishlists</a>
+                    <a *ngIf="!isLoggedIn" class="dropdown-item font-weight-bold" [routerLink]="['/signup']">Sign up</a>
+                    <a *ngIf="!isLoggedIn" class="dropdown-item" [routerLink]="['/login']">Log in</a>
+                    <a *ngIf="isLoggedIn" class="dropdown-item font-weight-bold" href="#">Messages</a>
+                    <a *ngIf="isLoggedIn" class="dropdown-item font-weight-bold" href="#">Notifications</a>
+                    <a *ngIf="isLoggedIn" class="dropdown-item font-weight-bold" href="#">Trips</a>
+                    <a *ngIf="isLoggedIn" class="dropdown-item font-weight-bold" href="#">Wishlists</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Host your home</a>
                     <a class="dropdown-item" href="#">Host an experience</a>
-                    <a class="dropdown-item" href="#">Account</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Help</a>
-                    <a class="dropdown-item" href="#">Log out</a>
+                    <a *ngIf="isLoggedIn" class="dropdown-item" [routerLink]="['/user-info']">Account</a>
+                    <div *ngIf="isLoggedIn" class="dropdown-divider"></div>
+                    <a *ngIf="!isLoggedIn" class="dropdown-item" href="#">Help</a>
+                    <button *ngIf="isLoggedIn" class="dropdown-item" (click)="handleLogOut()">Log out</button>
                 </div>
             </li>
         </ul>

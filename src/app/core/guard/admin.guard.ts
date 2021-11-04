@@ -13,7 +13,7 @@ export class AdminGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const currentUser = JSON.parse(localStorage.getItem('userData')!);
 
-    if (currentUser && currentUser.maLoaiNguoiDung === "QuanTri")
+    if (currentUser && currentUser.type === "ADMIN")
       return true;
 
     this.router.navigate(['/']);

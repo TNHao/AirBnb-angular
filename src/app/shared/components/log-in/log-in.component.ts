@@ -30,7 +30,7 @@ export class LogInComponent implements OnInit {
 			let userData = res.user;
 
 			await Swal.fire({
-				title: `Welcome back, ${userData.name}!`,
+				title: `Welcome Back, ${userData.name}!`,
 				icon: 'success'
 			});
 			
