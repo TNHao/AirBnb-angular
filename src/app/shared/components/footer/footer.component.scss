@@ -1,6 +1,11 @@
 footer{
     .pdx-80{
         padding: 0 80px;
+
+        @media screen and (max-width: 950px) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
     }
 
     .pdy-48{

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -9,7 +10,7 @@ import Swal from 'sweetalert2';
 export class HeaderComponent implements OnInit {
   isLoggedIn: boolean = true;
 
-  constructor() {
+  constructor(private router: Router) {
     const currentUser = JSON.parse(localStorage.getItem('userData')!);
     if (currentUser) this.isLoggedIn = true;
     else 
@@ -19,13 +20,15 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleLogOut(){
+ async handleLogOut(){
     this.isLoggedIn = false;
     localStorage.clear();
 
-    Swal.fire({
+    await Swal.fire({
       title: "Log out success!",
       icon: "success"
     });
+
+    this.router.navigate(['/']);
   }
 }
